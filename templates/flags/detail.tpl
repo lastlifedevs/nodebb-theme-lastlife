@@ -5,7 +5,7 @@
 	<div class="col-sm-8 col-md-9">
 		<h2>
 			<div class="pull-right">
-				<a class="btn btn-link" href="{config.relative_path}/flags"><i class="fa fa-chevron-left"></i> [[flags:back]]</a>
+				<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-link" href="{config.relative_path}/flags"><i class="fa fa-chevron-left"></i> [[flags:back]]</a></div>
 			</div>
 			{target_readable}
 			<small><span class="timeago" title="{datetimeISO}"></span></small>
@@ -102,7 +102,7 @@
 							<!-- END assignees -->
 						</select>
 					</div>
-					<button type="button" class="btn btn-block btn-primary" data-action="update">[[flags:update]]</button>
+					<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button type="button" class="btn btn-block btn-primary" data-action="update">[[flags:update]]</button></div>
 				</form>
 
 				<hr />
@@ -111,7 +111,7 @@
 					<div class="form-group">
 						<label for="note">[[flags:notes]]</label>
 						<textarea id="note" class="form-control"></textarea>
-						<button type="button" class="btn btn-block btn-primary" data-action="appendNote">[[flags:add-note]]</button>
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button type="button" class="btn btn-block btn-primary" data-action="appendNote">[[flags:add-note]]</button></div>
 					</div>
 				</form>
 

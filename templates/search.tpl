@@ -6,11 +6,11 @@
 			<form id="advanced-search">
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-5">
 							<label>[[global:search]]</label>
 							<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-5">
 							<label>[[search:in]]</label>
 							<select id="search-in" class="form-control">
 								<option value="titlesposts">[[search:titles-posts]]</option>
@@ -29,7 +29,7 @@
 						</div>
 						<div class="col-md-2">
 							<label>&nbsp;</label>
-							<button type="submit" class="btn btn-primary form-control">[[global:search]]</button>
+							<div class="groove-border-wrapper btn-wrapper"><button type="submit" class="btn btn-primary form-control">[[global:search]]</button></div>
 						</div>
 					</div>
 				</div>
@@ -152,9 +152,9 @@
 
 
 						<div class="btn-group">
-							<button type="submit" class="btn btn-primary">[[global:search]]</button>
-							<a class="btn btn-default" id="save-preferences" href="#">[[search:save-preferences]]</a>
-							<a class="btn btn-default" id="clear-preferences" href="#">[[search:clear-preferences]]</a>
+							<div class="groove-border-wrapper btn-wrapper"><button type="submit" class="btn btn-primary">[[global:search]]</button></div>
+							<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-default" id="save-preferences" href="#">[[search:save-preferences]]</a></div>
+							<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-default" id="clear-preferences" href="#">[[search:clear-preferences]]</a></div>
 						</div>
 					</div>
 				</div>

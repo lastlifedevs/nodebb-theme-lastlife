@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
-  "version": "9.1.4",
+  "name": "nodebb-theme-lastlife",
+  "version": "0.0.12",
   "nbbpm": {
     "compatibility": "^1.11.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "The official Last Life NodeBB theme.",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/lastlifedevs/nodebb-theme-lastlife"
   },
   "keywords": [
     "nodebb",
@@ -32,11 +32,16 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@designcreateplay.com",
       "url": "https://github.com/barisusakli"
+    },
+    {
+      "name": "Joshua 'Veegie' Balanuik",
+      "email": "veegie@last-life.net",
+      "url": "https://github.com/veegie"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/lastlifedevs/nodebb-theme-lastlife/issues"
   },
   "dependencies": {
     "pulling": "^2.0.0",

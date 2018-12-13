@@ -9,8 +9,8 @@
 					<input id="uploadFromUrl" class="form-control" type="text"/>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
-					<button class="btn btn-primary upload-btn">[[user:upload_picture]]</button>
+					<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button></div>
+					<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-primary upload-btn">[[user:upload_picture]]</button></div>
 				</div>
 			</div>
 		</div>

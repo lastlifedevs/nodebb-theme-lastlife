@@ -15,8 +15,8 @@
 	<div class="panel-footer">
 		&nbsp;
 		<div class="btn-group pull-right">
-			<button class="btn btn-link btn-xs" id="move_posts_cancel">[[global:buttons.close]]</button>
-			<button class="btn btn-primary btn-xs" id="move_posts_confirm" disabled>[[topic:move]]</button>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-link btn-xs" id="move_posts_cancel">[[global:buttons.close]]</button></div>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-primary btn-xs" id="move_posts_confirm" disabled>[[topic:move]]</button></div>
 		</div>
 	</div>
 </div>

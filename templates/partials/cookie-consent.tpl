@@ -1,4 +1,4 @@
 <div class="cookie-consent">
-    <button class="pull-right btn btn-primary">{dismiss}</button>
+    <div class="groove-border-wrapper btn-wrapper pull-right"><button class="btn btn-primary">{dismiss}</button></div>
     {message} <a target="_blank" href="http://cookiesandyou.com/">{link}</a>
 </div>

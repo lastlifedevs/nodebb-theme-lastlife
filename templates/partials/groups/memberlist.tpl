@@ -30,13 +30,13 @@
 
 			<!-- IF group.isOwner -->
 			<div class="owner-controls btn-group pull-right">
-				<a class="btn btn-sm" href="#" data-ajaxify="false" data-action="toggleOwnership" title="[[groups:details.grant]]">
+				<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-sm" href="#" data-ajaxify="false" data-action="toggleOwnership" title="[[groups:details.grant]]">
 					<i class="fa fa-star"></i>
-				</a>
+				</a></div>
 
-				<a class="btn btn-sm" href="#" data-ajaxify="false" data-action="kick" title="[[groups:details.kick]]">
+				<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-sm" href="#" data-ajaxify="false" data-action="kick" title="[[groups:details.kick]]">
 					<i class="fa fa-ban"></i>
-				</a>
+				</a></div>
 			</div>
 			<!-- ENDIF group.isOwner -->
 		</td>

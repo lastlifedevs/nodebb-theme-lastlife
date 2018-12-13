@@ -1,31 +1,29 @@
 <div class="card" style="border-color: {../bgColor}">
-	<!-- BEGIN posts -->
-	<!-- IF @first -->
-	<div component="category/posts">
-		<p>
-			<a href="{config.relative_path}/user/{../user.userslug}">
-				<!-- IF ../user.picture -->
-				<img class="user-img" title="{../user.username}" alt="{../user.username}" src="{../user.picture}">
-				<!-- ELSE -->
-				<span class="user-icon user-img" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</span>
-				<!-- ENDIF ../user.picture -->
+    <!-- BEGIN posts -->
+    <!-- IF @first -->
+    <div component="category/posts">
+        <p>
+            <strong><a href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->" title="{../topic.title}">{../topic.title}</a></strong>
+        </p>
+        <p>
+            <a href="{config.relative_path}/user/{../user.userslug}" title="{../user.username}">
+				<!-- IF ../user.fullname -->{../user.fullname}<!-- ELSE -->{../user.username}<!-- ENDIF ../user.fullname -->
 			</a>
-			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
-				<small class="timeago" title="{../timestampISO}"></small>
-			</a>
-		</p>
-		<div class="post-content">
-			{../content}
-		</div>
-	</div>
-	<!-- ENDIF @first -->
-	<!-- END posts -->
+        </p>
+        <p>
+            <a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
+                <small class="timeago" title="{../timestampISO}"></small>
+            </a>
+        </p>
+    </div>
+    <!-- ENDIF @first -->
+    <!-- END posts -->
 
-	<!-- IF !../posts.length -->
-	<div component="category/posts">
-		<div class="post-content">
-			[[category:no_new_posts]]
-		</div>
-	</div>
-	<!-- ENDIF !../posts.length -->
+    <!-- IF !../posts.length -->
+    <div component="category/posts">
+        <div class="post-content">
+            [[category:no_new_posts]]
+        </div>
+    </div>
+    <!-- ENDIF !../posts.length -->
 </div>

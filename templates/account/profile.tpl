@@ -1,9 +1,9 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="profile row">
+	<div class="profile row rpg-box">
 		<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
-		<h2 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
+		<h2 class="username"><!-- IF !banned -->@{userslug}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
 		<!-- IF isAdminOrGlobalModeratorOrModerator -->
 		<!-- IF banned -->
 		<div class="text-center">
@@ -26,6 +26,24 @@
 		</div>
 		<br/>
 		<!-- ENDIF selectedGroup.length -->
+
+		<div class="social-links" aria-hidden="true">
+			<!-- IF customFields.twitter -->
+			<a href="https://twitter.com/{customFields.twitter}" class="twitter" tooltip="Twitter: {customFields.twitter}"><i class="ll-social-icon icon-twitter"></i></a>
+			<!-- ENDIF customFields.twitter -->
+			<!-- IF customFields.discord -->
+			<span class="discord" tooltip="Discord: {customFields.discord}"><i class="ll-social-icon icon-discord"></i></span>
+			<!-- ENDIF customFields.discord -->
+			<!-- IF customFields.twitch -->
+			<a href="https://twitch.tv/{customFields.twitch}" class="twitch" tooltip="Twitch: {customFields.twitch}"><i class="ll-social-icon icon-twitch"></i></a>
+			<!-- ENDIF customFields.twitch -->
+			<!-- IF customFields.youtube -->
+			<a href="https://www.youtube.com/channel/{customFields.youtube}" class="youtube" tooltip="YouTube"><i class="ll-social-icon icon-youtube"></i></a>
+			<!-- ENDIF customFields.youtube -->
+			<!-- IF customFields.steam -->
+			<a href="https://steamcommunity.com/id/{customFields.steam}" class="steam" tooltip="Steam Profile"><i class="ll-social-icon icon-steam"></i></a>
+			<!-- ENDIF customFields.steam -->
+		</div>
 
 		<!-- IF aboutme -->
 		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
@@ -101,9 +119,9 @@
 
 				<!-- IF !isSelf -->
 				<!-- IF isFollowing -->
-				<a component="account/unfollow" href="#" class="btn btn-warning btn-sm">[[user:unfollow]]</a>
+				<div class="groove-border-wrapper btn-wrapper"><a component="account/unfollow" href="#" class="btn btn-warning btn-sm">[[user:unfollow]]</a></div>
 				<!-- ELSE -->
-				<a component="account/follow" href="#" class="btn btn-success btn-sm">[[user:follow]]</a>
+				<div class="groove-border-wrapper btn-wrapper"><a component="account/follow" href="#" class="btn btn-success btn-sm">[[user:follow]]</a></div>
 				<!-- ENDIF isFollowing -->
 				<!-- ENDIF !isSelf -->
 			</div>

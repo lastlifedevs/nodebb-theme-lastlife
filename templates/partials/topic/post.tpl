@@ -1,108 +1,115 @@
-<div class="clearfix post-header">
-	<div class="icon pull-left">
-		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			<!-- IF posts.user.picture -->
-			<img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" align="left" itemprop="image" />
-			<!-- ELSE -->
-			<div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
-			<!-- ENDIF posts.user.picture -->
-			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
+<div class="rpg-box author-info-box">
+    <div class="icon" aria-hidden="true">
+        <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
+            <!-- IF posts.user.picture -->
+            <img src="{posts.user.picture}" align="left" itemprop="image" />
+            <!-- ELSE -->
+            <div class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
+            <!-- ENDIF posts.user.picture -->
+            <i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
 
-		</a>
-	</div>
+        </a>
+    </div>
+    <div class="author-name-container">
+        <span class="author-name">
+            <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="{posts.user.username}"><!-- IF posts.user.fullname -->{posts.user.fullname}<!-- ELSE -->{posts.user.username}<!-- ENDIF posts.user.fullname --></a>
+        </span>
+        <!-- IF posts.user.fullname -->
+        <span class="author-user-name-hint hidden-lg">({posts.user.username})</span>
+        <!-- ENDIF posts.user.fullname -->
+    </div>
+    <div class="author-badges">
+        <!-- IMPORT partials/topic/badge.tpl -->
 
-	<small class="pull-left">
-		<strong>
-			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
-		</strong>
+        <!-- IF posts.user.banned -->
+        <span class="label label-danger">[[user:banned]]</span>
+        <!-- ENDIF posts.user.banned -->
+    </div>
+    <div class="row author-stats" aria-hidden="true">
+        <div>
+            <small class="user-stat-name">[[global:posts]]:</small> <small class="user-stat-value">{posts.user.postcount}</small>
+        </div>
+    </div>
+    <div class="row social-links" aria-hidden="true">
+        <!-- IF posts.customFields.twitter -->
+        <a href="https://twitter.com/{posts.customFields.twitter}" class="twitter" tooltip="Twitter: {posts.customFields.twitter}"><i class="ll-social-icon icon-twitter"></i></a>
+        <!-- ENDIF posts.customFields.twitter -->
+        <!-- IF posts.customFields.discord -->
+        <span class="discord" tooltip="Discord: {posts.customFields.discord}"><i class="ll-social-icon icon-discord"></i></span>
+        <!-- ENDIF posts.customFields.discord -->
+        <!-- IF posts.customFields.twitch -->
+        <a href="https://twitch.tv/{posts.customFields.twitch}" class="twitch" tooltip="Twitch: {posts.customFields.twitch}"><i class="ll-social-icon icon-twitch"></i></a>
+        <!-- ENDIF posts.customFields.twitch -->
+        <!-- IF posts.customFields.youtube -->
+        <a href="https://www.youtube.com/channel/{posts.customFields.youtube}" class="youtube" tooltip="YouTube"><i class="ll-social-icon icon-youtube"></i></a>
+        <!-- ENDIF posts.customFields.youtube -->
+        <!-- IF posts.customFields.steam -->
+        <a href="https://steamcommunity.com/id/{posts.customFields.steam}" class="steam" tooltip="Steam Profile"><i class="ll-social-icon icon-steam"></i></a>
+        <!-- ENDIF posts.customFields.steam -->
+    </div>
 
-		<!-- IMPORT partials/topic/badge.tpl -->
-
-		<!-- IF posts.user.banned -->
-		<span class="label label-danger">[[user:banned]]</span>
-		<!-- ENDIF posts.user.banned -->
-
-		<span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
-
-			<i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
-
-			<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
-
-			<!-- IF posts.toPid -->
-			<a component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
-			<!-- ENDIF posts.toPid -->
-
-			<span>
-				<!-- IF posts.user.custom_profile_info.length -->
-				&#124;
-				<!-- BEGIN posts.user.custom_profile_info -->
-				{posts.user.custom_profile_info.content}
-				<!-- END posts.user.custom_profile_info -->
-				<!-- ENDIF posts.user.custom_profile_info.length -->
-			</span>
-		</span>
-		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
-
-	</small>
 </div>
 
-<br />
+<div class="post-wrapper">
+    <div class="post-container">
+        <div class="post-header">
+            <small class="pull-right visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                <!-- IF posts.toPid -->
+                <a component="post/parent" class="hidden-xs" data-topid="{posts.toPid}" href="/post/{posts.toPid}"><i class="fa fa-reply"></i> Posted in reply to @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
+                <!-- ENDIF posts.toPid -->
 
-<div class="content" component="post/content" itemprop="text">
-	{posts.content}
+                <a class="permalink" href="{config.relative_path}/post/{posts.pid}"><i class="fa fa-clock-o"></i> <span class="timeago" title="{posts.timestampISO}"></span></a>
+            
+                <i component="post/edit-indicator" class="fa fa-pencil-square<!-- IF privileges.posts:history --> pointer<!-- END --> edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
+            
+                <small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
+            
+                <span>
+                    <!-- IF posts.user.custom_profile_info.length -->
+                    &#124;
+                    <!-- BEGIN custom_profile_info -->
+                    {posts.user.custom_profile_info.content}
+                    <!-- END custom_profile_info -->
+                    <!-- ENDIF posts.user.custom_profile_info.length -->
+                </span>
+            </small>
+        </div>
+        <div class="content" component="post/content" itemprop="text">
+            {posts.content}
+        </div>
+        <!-- IF posts.user.signature -->
+        <div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
+        <!-- ENDIF posts.user.signature -->
+        <div class="clearfix post-footer">
+            <div class="footer-container">
+                <!-- IF !reputation:disabled -->
+                <span class="votes">
+                    <a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
+                        <i class="fa fa-thumbs-up"></i>
+                    </a>
+        
+                    <span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
+        
+                    <!-- IF !downvote:disabled -->
+                    <a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <!-- ENDIF !downvote:disabled -->
+                </span>
+                <!-- ENDIF !reputation:disabled -->
+
+                <small class="pull-right">
+                    <span class="post-tools">
+                        <div class="post-tool groove-border-wrapper btn-wrapper"><a component="post/reply" href="#" class="no-select btn btn-primary <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a></div>
+                        <div class="post-tool groove-border-wrapper btn-wrapper"><a component="post/quote" href="#" class="no-select btn btn-secondary <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a></div>
+                    </span>
+
+                    <!-- IMPORT partials/topic/post-menu.tpl -->
+                </small>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="clearfix post-footer">
-	<!-- IF posts.user.signature -->
-	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
-	<!-- ENDIF posts.user.signature -->
-
-	<small class="pull-right">
-		<span class="post-tools">
-			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
-			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
-		</span>
-
-		<!-- IF !reputation:disabled -->
-		<span class="votes">
-			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
-				<i class="fa fa-chevron-up"></i>
-			</a>
-
-			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
-
-			<!-- IF !downvote:disabled -->
-			<a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
-				<i class="fa fa-chevron-down"></i>
-			</a>
-			<!-- ENDIF !downvote:disabled -->
-		</span>
-		<!-- ENDIF !reputation:disabled -->
-
-		<!-- IMPORT partials/topic/post-menu.tpl -->
-	</small>
-
-	<!-- IF !hideReplies -->
-	<a component="post/reply-count" href="#" class="threaded-replies no-select <!-- IF !posts.replies.count -->hidden<!-- ENDIF !posts.replies.count -->">
-		<span component="post/reply-count/avatars" class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
-			<!-- BEGIN posts.replies.users -->
-			<!-- IF posts.replies.users.picture -->
-			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="avatar" src="{posts.replies.users.picture}"  itemprop="image" /></span>
-			<!-- ELSE -->
-			<div component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="user-icon" style="background-color: {posts.replies.users.icon:bgColor};">{posts.replies.users.icon:text}</div>
-			<!-- ENDIF posts.replies.users.picture -->
-			<!-- END posts.replies.users -->
-		</span>
-
-		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>
-		<span class="replies-last hidden-xs">[[topic:last_reply_time]] <span class="timeago" title="{posts.replies.timestampISO}"></span></span>
-
-		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
-		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
-		<i class="fa fa-fw fa-spin fa-spinner hidden" component="post/replies/loading"></i>
-	</a>
-	<!-- ENDIF !hideReplies -->
-</div>
 
 <hr />

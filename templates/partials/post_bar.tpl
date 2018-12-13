@@ -10,7 +10,7 @@
 	<!-- IMPORT partials/topic/browsing-users.tpl -->
 
 	<div class="topic-main-buttons pull-right">
-		<span class="loading-indicator btn pull-left hidden" done="0">
+		<span class="loading-indicator pull-left hidden" done="0">
 			<span class="hidden-xs">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
 		</span>
 
@@ -19,9 +19,9 @@
 		<!-- IMPORT partials/topic/reply-button.tpl -->
 
 		<!-- IF loggedIn -->
-		<button component="topic/mark-unread" class="btn btn-default">
+		<div class="groove-border-wrapper btn-wrapper"><button component="topic/mark-unread" class="btn btn-default">
 			<i class="fa fa-inbox"></i><span class="visible-sm-inline visible-md-inline visible-lg-inline"> [[topic:mark_unread]]</span>
-		</button>
+		</button></div>
 		<!-- ENDIF loggedIn -->
 
 		<!-- IMPORT partials/topic/watch.tpl -->

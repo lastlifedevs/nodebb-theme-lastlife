@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-persona",
+	"id": "nodebb-theme-lastlife",
 	"library": "library.js",
 	"hooks": [
 		{ "hook": "filter:teasers.get", "method": "getTeasers" },
@@ -19,6 +19,9 @@
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
 	},
+    "staticDirs": {
+        "images": "./static/images"
+    	},
 	"acpScripts": [
 		"lib/admin.js"
 	],

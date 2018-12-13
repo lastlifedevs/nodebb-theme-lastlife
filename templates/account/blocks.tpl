@@ -20,7 +20,7 @@
 							<!-- IF edit -->
 							<!-- BEGIN edit -->
 							<hr />
-							<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
+							<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button></div>
 							<div class="pull-left">
 								<a href="{config.relative_path}/uid/{../uid}">
 									<!-- IF ../picture -->

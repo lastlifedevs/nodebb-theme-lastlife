@@ -28,7 +28,7 @@
 	<div class="col-xs-6 col-sm-4 col-md-6">
 		<div class="btn-group-vertical btn-block" role="group">
 			<!-- IF allowProfileImageUploads -->
-			<button type="button" class="btn btn-default" data-action="upload">
+			<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button type="button" class="btn btn-default" data-action="upload">
 				<span class="hidden-xs hidden-sm">
 					[[user:upload_new_picture]]
 				</span>
@@ -36,9 +36,9 @@
 					<i class="fa fa-plus"></i>
 					<i class="fa fa-upload"></i>
 				</span>
-			</button>
+			</button></div>
 			<!-- ENDIF allowProfileImageUploads -->
-			<button type="button" class="btn btn-default" data-action="upload-url">
+			<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button type="button" class="btn btn-default" data-action="upload-url">
 				<span class="hidden-xs hidden-sm">
 					[[user:upload_new_picture_from_url]]
 				</span>
@@ -46,9 +46,9 @@
 					<i class="fa fa-plus"></i>
 					<i class="fa fa-link"></i>
 				</span>
-			</button>
+			</button></div>
 			<!-- IF uploaded -->
-			<button type="button" class="btn btn-default" data-action="remove-uploaded">
+			<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button type="button" class="btn btn-default" data-action="remove-uploaded">
 				<span class="hidden-xs hidden-sm">
 					[[user:remove_uploaded_picture]]
 				</span>
@@ -57,7 +57,7 @@
 					<i class="fa fa-long-arrow-right"></i>
 					<i class="fa fa-trash-o"></i>
 				</span>
-			</button>
+			</button></div>
 			<!-- ENDIF uploaded -->
 		</div>
 	</div>

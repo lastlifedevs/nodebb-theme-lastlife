@@ -12,7 +12,7 @@
 		<div class="col-xs-3 text-right">
 			<!-- IF inviteOnly -->
 			<!-- IF loggedIn -->
-			<button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button>
+			<div class="groove-border-wrapper btn-wrapper"><button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button></div>
 			<!-- ENDIF loggedIn -->
 			<!-- ENDIF inviteOnly -->
 		</div>

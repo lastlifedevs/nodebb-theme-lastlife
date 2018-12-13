@@ -24,9 +24,9 @@
 		<!-- IF !config.disableChatMessageEditing -->
 		<!-- IF messages.self -->
 		<div class="pull-right btn-group controls">
-			<button class="btn btn-xs btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
-			<button class="btn btn-xs btn-link" data-action="delete"><i class="fa fa-times"></i></button>
-			<button class="btn btn-xs btn-link" data-action="restore"><i class="fa fa-repeat"></i></button>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-xs btn-link" data-action="edit"><i class="fa fa-pencil"></i></button></div>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-xs btn-link" data-action="delete"><i class="fa fa-times"></i></button></div>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-xs btn-link" data-action="restore"><i class="fa fa-repeat"></i></button></div>
 		</div>
 		<!-- ENDIF messages.self -->
 		<!-- ENDIF !config.disableChatMessageEditing -->
