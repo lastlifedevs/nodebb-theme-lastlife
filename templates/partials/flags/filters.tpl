@@ -60,7 +60,7 @@
 				<input type="number" class="form-control" id="filter-reporterId" name="reporterId" min="0" />
 			</div>
 
-			<button type="button" class="btn btn-primary btn-block">[[flags:apply-filters]]</button>
+			<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button type="button" class="btn btn-primary btn-block">[[flags:apply-filters]]</button></div>
 		</form>
 	</div>
 </div>

@@ -15,33 +15,33 @@
 					</div>
 					<ul class="list-group">
 						<!-- IF allowProfilePicture -->
-						<a id="changePictureBtn" href="#" class="list-group-item">[[user:change_picture]]</a>
+						<div class="groove-border-wrapper"><a id="changePictureBtn" href="#" class="btn btn-block btn-primary">[[user:change_picture]]</a></div>
 						<!-- ENDIF allowProfilePicture -->
 						<!-- IF !username:disableEdit -->
-						<a href="{config.relative_path}/user/{userslug}/edit/username" class="list-group-item">[[user:change_username]]</a>
+						<div class="groove-border-wrapper"><a href="{config.relative_path}/user/{userslug}/edit/username" class="btn btn-block btn-primary">[[user:change_username]]</a></div>
 						<!-- ENDIF !username:disableEdit -->
 						<!-- IF !email:disableEdit -->
-						<a href="{config.relative_path}/user/{userslug}/edit/email" class="list-group-item">[[user:change_email]]</a>
+						<div class="groove-border-wrapper"><a href="{config.relative_path}/user/{userslug}/edit/email" class="btn btn-block btn-primary">[[user:change_email]]</a></div>
 						<!-- ENDIF !email:disableEdit -->
 						<!-- IF canChangePassword -->
-						<a href="{config.relative_path}/user/{userslug}/edit/password" class="list-group-item">[[user:change_password]]</a>
+						<div class="groove-border-wrapper"><a href="{config.relative_path}/user/{userslug}/edit/password" class="btn btn-block btn-primary">[[user:change_password]]</a></div>
 						<!-- ENDIF canChangePassword -->
 						<!-- BEGIN editButtons -->
-						<a href="{config.relative_path}{editButtons.link}" class="list-group-item">{editButtons.text}</a>
+						<div class="groove-border-wrapper"><a href="{config.relative_path}{editButtons.link}" class="btn btn-block btn-primary">{editButtons.text}</a></div>
 						<!-- END editButtons -->
 					</ul>
 
 					<!-- IF config.requireEmailConfirmation -->
 					<!-- IF email -->
 					<!-- IF isSelf -->
-					<a id="confirm-email" href="#" class="btn btn-warning <!-- IF email:confirmed -->hide<!-- ENDIF email:confirmed -->">[[user:confirm_email]]</a><br/><br/>
+					<div class="groove-border-wrapper btn-wrapper"><a id="confirm-email" href="#" class="btn btn-warning <!-- IF email:confirmed -->hide<!-- ENDIF email:confirmed -->">[[user:confirm_email]]</a></div><br/><br/>
 					<!-- ENDIF isSelf -->
 					<!-- ENDIF email -->
 					<!-- ENDIF config.requireEmailConfirmation -->
 
 					<!-- IF allowAccountDelete -->
 					<!-- IF isSelf -->
-					<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a><br/><br/>
+					<div class="groove-border-wrapper btn-wrapper"><a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a></div><br/><br/>
 					<!-- ENDIF isSelf -->
 					<!-- ENDIF allowAccountDelete -->
 
@@ -53,9 +53,9 @@
 					<form class='form-horizontal'>
 
 						<div class="control-group">
-							<label class="control-label" for="inputFullname">[[user:fullname]]</label>
+							<label class="control-label" for="inputFullname">Display Name</label>
 							<div class="controls">
-								<input class="form-control" type="text" id="inputFullname" placeholder="[[user:fullname]]" value="{fullname}">
+								<input class="form-control" type="text" id="inputFullname" placeholder="Display Name - Leave blank to use your username" value="{fullname}">
 							</div>
 						</div>
 						<!-- IF allowWebsite -->
@@ -119,7 +119,7 @@
 						<input type="hidden" id="inputUID" value="{uid}"><br />
 
 						<div class="form-actions">
-							<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
+							<div class="groove-border-wrapper btn-wrapper"><a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a></div>
 						</div>
 
 					</form>
@@ -135,7 +135,7 @@
 					<!-- BEGIN sso -->
 					<div class="list-group-item">
 						<!-- IF ../deauthUrl -->
-						<a class="btn btn-default btn-xs pull-right" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
+						<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-default btn-xs pull-right" href="{../deauthUrl}">[[user:sso.dissociate]]</a></div>
 						<!-- END -->
 						<a href="{../url}" target="<!-- IF ../associated -->_blank<!-- ELSE -->_top<!-- ENDIF ../associated -->">
 							<!-- IF ../icon --><i class="fa {../icon}"></i><!-- ENDIF ../icon -->

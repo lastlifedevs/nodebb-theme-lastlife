@@ -29,7 +29,7 @@
                         </td>
                         <td>
                             <div class="btn-group ">
-                                <button class="btn btn-danger btn-xs" data-action="delete"><i class="fa fa-trash"></i></button>
+                                <div class="groove-border-wrapper btn-wrapper"><button class="btn btn-danger btn-xs" data-action="delete"><i class="fa fa-trash"></i></button></div>
                             </div>
                         </td>
                     </tr>

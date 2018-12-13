@@ -11,9 +11,9 @@
 	<div class="panel-footer">
 		&nbsp;
 		<div class="btn-group pull-right">
-			<button class="btn btn-link btn-xs" id="delete_posts_cancel">[[global:buttons.close]]</button>
-			<button class="btn btn-primary btn-xs" id="delete_posts_confirm" disabled>[[topic:delete]]</button>
-			<button class="btn btn-danger btn-xs" id="purge_posts_confirm" disabled>[[topic:purge]]</button>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-link btn-xs" id="delete_posts_cancel">[[global:buttons.close]]</button></div>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-primary btn-xs" id="delete_posts_confirm" disabled>[[topic:delete]]</button></div>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-danger btn-xs" id="purge_posts_confirm" disabled>[[topic:purge]]</button></div>
 		</div>
 	</div>
 </div>

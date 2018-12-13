@@ -18,8 +18,8 @@
 	<div class="panel-footer">
 		&nbsp;
 		<div class="btn-group pull-right">
-			<button class="btn btn-link btn-xs" id="merge_topics_cancel">[[global:buttons.close]]</button>
-			<button class="btn btn-primary btn-xs" id="merge_topics_confirm" disabled>[[topic:thread_tools.merge]]</button>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-link btn-xs" id="merge_topics_cancel">[[global:buttons.close]]</button></div>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-primary btn-xs" id="merge_topics_confirm" disabled>[[topic:thread_tools.merge]]</button></div>
 		</div>
 	</div>
 </div>

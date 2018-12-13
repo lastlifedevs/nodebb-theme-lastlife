@@ -13,20 +13,20 @@
 				</p>
 				<div class="btn-group btn-group-justified">
 					<div class="btn-group">
-						<button class="btn btn-default flag-reason">[[flags:modal-reason-spam]]</button>
+						<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-default flag-reason">[[flags:modal-reason-spam]]</button></div>
 					</div>
 					<div class="btn-group">
-						<button class="btn btn-default flag-reason">[[flags:modal-reason-offensive]]</button>
+						<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-default flag-reason">[[flags:modal-reason-offensive]]</button></div>
 					</div>
 					<div class="btn-group">
-						<button class="btn btn-default toggle-custom">[[flags:modal-reason-other]]</button>
+						<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-default toggle-custom">[[flags:modal-reason-other]]</button></div>
 					</div>
 				</div>
 				<div class="form-group">
 					<textarea class="form-control" id="flag-reason-custom" placeholder="[[flags:modal-reason-custom]]" disabled="disabled"></textarea>
 				</div>
 
-				<button type="button" class="btn btn-primary pull-right" id="flag-post-commit" disabled>[[flags:modal-submit]]</button>
+				<div class="groove-border-wrapper btn-wrapper"><button type="button" class="btn btn-primary pull-right" id="flag-post-commit" disabled>[[flags:modal-submit]]</button></div>
 				<div class="clear"></div>
 			</div>
 		</div>

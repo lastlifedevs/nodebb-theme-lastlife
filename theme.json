@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-persona",
-    "name": "Persona",
-    "description": "The default theme for NodeBB. Uses a standard approach to forum design.",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona",
+    "id": "nodebb-theme-lastlife",
+    "name": "Last Life",
+    "description": "The official Last Life NodeBB theme.",
+    "url": "https://github.com/lastlifedevs/nodebb-theme-lastlife",
     "screenshot": "screenshot.png"
 }

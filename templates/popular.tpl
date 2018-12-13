@@ -7,11 +7,13 @@
 <div class="popular">
 	<div class="btn-toolbar">
 		<div class="pull-left">
-			<!-- IF loggedIn -->
-			<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
-			<!-- ELSE -->
-			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-			<!-- ENDIF loggedIn -->
+			<div class="groove-border-wrapper btn-wrapper">
+				<!-- IF loggedIn -->
+				<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
+				<!-- ELSE -->
+				<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+				<!-- ENDIF loggedIn -->
+			</div>
 		</div>
 
 		<!-- IMPORT partials/category-filter.tpl -->

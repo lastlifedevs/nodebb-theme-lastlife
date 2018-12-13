@@ -51,7 +51,7 @@
 
 				<div class="form-group">
 					<div class="col-lg-offset-4 col-lg-8">
-						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button></div>
 					</div>
 				</div>
 				<input id="referrer" type="hidden" name="referrer" value="" />

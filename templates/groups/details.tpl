@@ -29,7 +29,7 @@
 				<p>{group.descriptionParsed}</p>
 				<!-- IF isAdmin -->
 				<div class="pull-right">
-					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
+					<div class="groove-border-wrapper btn-wrapper"><a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a></div>
 				</div>
 				<!-- ENDIF isAdmin -->
 				<!-- IF loggedIn -->
@@ -54,13 +54,15 @@
 					<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 					<!-- IF group.pending.length -->
 					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<div class="groove-border-wrapper btn-wrapper">
+							<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 							[[global:more]] <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept_all]]</a></li>
-							<li><a href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject_all]]</a></li>
-						</ul>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept_all]]</a></li>
+								<li><a href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject_all]]</a></li>
+							</ul>
+						</div>
 					</div>
 					<!-- ENDIF group.pending.length -->
 				</h3>
@@ -84,13 +86,15 @@
 						</td>
 						<td>
 							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<div class="groove-border-wrapper btn-wrapper">
+									<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#" data-ajaxify="false" data-action="accept">[[groups:pending.accept]]</a></li>
-									<li><a href="#" data-ajaxify="false" data-action="reject">[[groups:pending.reject]]</a></li>
-								</ul>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#" data-ajaxify="false" data-action="accept">[[groups:pending.accept]]</a></li>
+										<li><a href="#" data-ajaxify="false" data-action="reject">[[groups:pending.reject]]</a></li>
+									</ul>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -115,7 +119,7 @@
 				</div>
 
 				<div class="form-group clearfix">
-					<button class="btn btn-default btn-sm pull-right" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button>
+					<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-default btn-sm pull-right" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button></div>
 				</div>
 
 				<table component="groups/invited" class="table table-striped table-hover">
@@ -136,12 +140,14 @@
 						</td>
 						<td>
 							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<div class="groove-border-wrapper btn-wrapper">
+									<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									[[global:more]] <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#" data-ajaxify="false" data-action="rescindInvite">[[groups:invited.uninvite]]</a></li>
-								</ul>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#" data-ajaxify="false" data-action="rescindInvite">[[groups:invited.uninvite]]</a></li>
+									</ul>
+								</div>
 							</div>
 						</td>
 					</tr>
@@ -177,8 +183,8 @@
 						<label>[[groups:details.badge_preview]]</label><br />
 						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa<!-- IF group.icon --> {group.icon}<!-- ENDIF group.icon -->"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span>
 
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
+						<div class="groove-border-wrapper btn-wrapper"><button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button></div>
+						<div class="groove-border-wrapper btn-wrapper"><button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button></div>
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
 						<div id="icons" class="hidden">
@@ -223,8 +229,8 @@
 						</label>
 					</div>
 
-					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
-					<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
+					<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button></div>
+					<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button></div>
 				</form>
 			</div>
 		</div>

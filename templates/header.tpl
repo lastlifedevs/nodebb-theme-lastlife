@@ -3,6 +3,10 @@
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
+	<link rel="stylesheet" type="text/css" href="/static/logo.css" />
+	<link rel="stylesheet" type="text/css" href="/static/fonts/lastlife-icon/font.css" />
+	<link rel="stylesheet" type="text/css" href="/static/fonts/ll-social-icons/font.css" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client.css?{config.cache-buster}" />
 	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client<!-- IF bootswatchSkin -->-{bootswatchSkin}<!-- END -->.css?{config.cache-buster}" />
 	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
 

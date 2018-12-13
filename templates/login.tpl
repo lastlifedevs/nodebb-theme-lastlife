@@ -36,12 +36,14 @@
 				<input type="hidden" name="noscript" id="noscript" value="true" />
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
-						<button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
-						<!-- IF allowRegistration -->
-						<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
-						<!-- ENDIF allowRegistration -->
-						&nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button></div>
 					</div>
+				</div>
+				<div class="col-lg-offset-2 col-lg-10">
+					<!-- IF allowRegistration -->
+					<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a>.</span>
+					<!-- ENDIF allowRegistration -->
+					&nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
 				</div>
 			</form>
 

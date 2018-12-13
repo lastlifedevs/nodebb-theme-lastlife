@@ -15,8 +15,8 @@
 	<div class="panel-footer">
 		&nbsp;
 		<div class="btn-group pull-right">
-			<button class="btn btn-link btn-xs" id="fork_thread_cancel">[[global:buttons.close]]</button>
-			<button class="btn btn-primary btn-xs" id="fork_thread_commit" disabled>[[topic:fork_topic]] <i class="fa fa-arrow-circle-right"></i></button>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-link btn-xs" id="fork_thread_cancel">[[global:buttons.close]]</button></div>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-primary btn-xs" id="fork_thread_commit" disabled>[[topic:fork_topic]] <i class="fa fa-arrow-circle-right"></i></button></div>
 		</div>
 	</div>
 </div>

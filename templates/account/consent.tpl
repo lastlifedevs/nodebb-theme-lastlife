@@ -18,7 +18,7 @@
 				[[user:consent.not_received]]
 				<br /><br />
 				<div class="text-center">
-					<button class="btn btn-warning" data-action="consent">[[user:consent.give]]</button>
+					<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-warning" data-action="consent">[[user:consent.give]]</button></div>
 				</div>
 			</div>
 			<!-- END -->
@@ -32,10 +32,10 @@
 					<!-- END -->
 
 					<div class="text-center">
-						<a class="btn btn-default" href="./settings">
+						<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-default" href="./settings">
 							<i class="fa fa-cog"></i>
 							[[pages:account/settings]]
-						</a>
+						</a></div>
 					</div>
 				</div>
 			</div>
@@ -53,15 +53,15 @@
 					<p>[[user:consent.right_to_data_portability_description]]</p>
 
 					<div class="btn-group-vertical btn-block">
-						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/profile">
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/profile">
 							<i class="fa fa-download"></i> [[user:consent.export_profile]]
-						</a>
-						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/posts">
+						</a></div>
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/posts">
 							<i class="fa fa-download"></i> [[user:consent.export_posts]]
-						</a>
-						<a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/uploads">
+						</a></div>
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/uploads">
 							<i class="fa fa-download"></i> [[user:consent.export_uploads]]
-						</a>
+						</a></div>
 					</div>
 				</div>
 			</div>

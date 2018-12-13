@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="col-lg-4">
 			<!-- IF allowGroupCreation -->
-			<button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new_group]]</button>
+			<div class="groove-border-wrapper btn-wrapper"><button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new_group]]</button></div>
 			<!-- ENDIF allowGroupCreation -->
 		</div>
 		<div class="col-lg-8">

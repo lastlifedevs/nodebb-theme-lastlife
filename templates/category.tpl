@@ -11,17 +11,15 @@
 		<!-- IF children.length --><hr class="hidden-xs"/><!-- ENDIF children.length -->
 
 		<div class="clearfix">
-			<!-- IF privileges.topics:create -->
-			<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
-			<!-- ELSE -->
-				<!-- IF !loggedIn -->
-				<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-				<!-- ENDIF !loggedIn -->
-			<!-- ENDIF privileges.topics:create -->
-
-			<a href="{url}">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
-			</a>
+			<div class="groove-border-wrapper btn-wrapper">
+				<!-- IF privileges.topics:create -->
+				<a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
+				<!-- ELSE -->
+					<!-- IF !loggedIn -->
+					<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+					<!-- ENDIF !loggedIn -->
+				<!-- ENDIF privileges.topics:create -->
+			</div>
 
 			<span class="pull-right" component="category/controls">
 				<!-- IMPORT partials/category/watch.tpl -->
@@ -43,6 +41,10 @@
 		<!-- ENDIF privileges.topics:create -->
 		<!-- ENDIF !topics.length -->
 
+		<a href="{url}">
+			<div class="alert alert-warning hide" id="new-topics-alert"></div>
+		</a>
+
 		<!-- IMPORT partials/topics_list.tpl -->
 
 		<!-- IF config.usePagination -->
@@ -60,6 +62,8 @@
 	{{widgets.footer.html}}
 	<!-- END widgets.footer -->
 </div>
+
+<!-- IMPORT partials/move_thread_modal.tpl -->
 
 <!-- IF !config.usePagination -->
 <noscript>
