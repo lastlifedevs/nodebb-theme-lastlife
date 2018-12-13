@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-lastlife",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "nbbpm": {
     "compatibility": "^1.11.0"
   },
