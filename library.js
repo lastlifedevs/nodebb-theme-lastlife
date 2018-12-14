@@ -6,26 +6,6 @@ var user = require.main.require('./src/user');
 
 var library = {};
 
-library.init = function(params, callback) {
-	var app = params.router;
-	var middleware = params.middleware;
-
-	app.get('/admin/plugins/persona', middleware.admin.buildHeader, renderAdmin);
-	app.get('/api/admin/plugins/persona', renderAdmin);
-
-	callback();
-};
-
-library.addAdminNavigation = function(header, callback) {
-	header.plugins.push({
-		route: '/plugins/persona',
-		icon: 'fa-paint-brush',
-		name: 'Persona Theme'
-	});
-
-	callback(null, header);
-};
-
 library.getTeasers = function(data, callback) {
 	data.teasers.forEach(function(teaser) {
 		if (teaser && teaser.content) {
@@ -86,19 +66,6 @@ library.defineWidgetAreas = function(areas, callback) {
 
 	callback(null, areas);
 };
-
-library.getThemeConfig = function(config, callback) {
-	meta.settings.get('persona', function(err, settings) {
-		config.hideSubCategories = settings.hideSubCategories === 'on';
-		config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
-		config.enableQuickReply = settings.enableQuickReply === 'on';
-		callback(null, config);
-	});
-};
-
-function renderAdmin(req, res, next) {
-	res.render('admin/plugins/persona', {});
-}
 
 library.addUserToTopic = function(data, callback) {
 	if (data.req.user) {

@@ -55,7 +55,7 @@
         <div class="post-header">
             <small class="pull-right visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
                 <!-- IF posts.toPid -->
-                <a component="post/parent" class="hidden-xs" data-topid="{posts.toPid}" href="/post/{posts.toPid}"><i class="fa fa-reply"></i> Posted in reply to @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
+                <a component="post/parent" class="hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> Posted in reply to @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
                 <!-- ENDIF posts.toPid -->
 
                 <a class="permalink" href="{config.relative_path}/post/{posts.pid}"><i class="fa fa-clock-o"></i> <span class="timeago" title="{posts.timestampISO}"></span></a>
