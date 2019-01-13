@@ -49,15 +49,15 @@
 						</label>
 					</div>
 					<!-- ENDIF !hideEmail -->
-
-				
-				<!-- IF !config.disableChat -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
-					</label>
+					
+					<!-- IF !config.disableChat -->
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
+						</label>
+					</div>
+					<!-- ENDIF !config.disableChat -->
 				</div>
-				<!-- ENDIF !config.disableChat -->
 			</div>
 
 			<h4>[[user:browsing]]</h4>
