@@ -39,26 +39,29 @@
 			</div>
 			<!-- ENDIF allowUserHomePage -->
 
+			<!-- We don't use any privacy settings (no one should be exposing their email on their forum accounts imo, and chat is disabled).
+				To prevent an empty settings block from being rendered, I'm just going to comment out this entire block.
 			<h4>[[global:privacy]]</h4>
 			<div class="well-wrapper groove-border-wrapper">
 				<div class="well">
-					<!-- IF !hideEmail -->
+					<-- IF !hideEmail --
 					<div class="checkbox">
 						<label>
-							<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/> <strong>[[user:show_email]]</strong>
+							<input type="checkbox" data-property="showemail" <-- IF settings.showemail --checked <-- ENDIF settings.showemail --/> <strong>[[user:show_email]]</strong>
 						</label>
 					</div>
-					<!-- ENDIF !hideEmail -->
+					<-- ENDIF !hideEmail --
 					
-					<!-- IF !config.disableChat -->
+					<-- IF !config.disableChat --
 					<div class="checkbox">
 						<label>
-							<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/> <strong>[[user:restrict_chats]]</strong>
+							<input type="checkbox" data-property="restrictChat" <-- IF settings.restrictChat --checked<-- ENDIF settings.restrictChat --/> <strong>[[user:restrict_chats]]</strong>
 						</label>
 					</div>
-					<!-- ENDIF !config.disableChat -->
+					<-- ENDIF !config.disableChat --
 				</div>
 			</div>
+			-->
 
 			<h4>[[user:browsing]]</h4>
 			<div class="well-wrapper groove-border-wrapper">
@@ -251,13 +254,14 @@
 							<div class="groove-border-wrapper btn-wrapper"><button type="button" class="form-control btn btn-sm btn-default" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button></div>
 						</div>
 					</div>
-				</div>
 					<!-- ENDIF !config.disableChat -->
+				</div>
+			</div>
+			
+			<div class="form-actions settings-submit-row">
+				<div class="groove-border-wrapper btn-wrapper"><a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a></div>
 			</div>
 		</div>
-	</div>
-	<div class="form-actions">
-		<div class="groove-border-wrapper btn-wrapper"><a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a></div>
 	</div>
 </div>
 
