@@ -53,13 +53,13 @@
 					<p>[[user:consent.right_to_data_portability_description]]</p>
 
 					<div class="btn-group-vertical btn-block">
-						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/profile">
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/profile">
 							<i class="fa fa-download"></i> [[user:consent.export_profile]]
 						</a></div>
-						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/posts">
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/posts">
 							<i class="fa fa-download"></i> [[user:consent.export_posts]]
 						</a></div>
-						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{uid}/export/uploads">
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/uploads">
 							<i class="fa fa-download"></i> [[user:consent.export_uploads]]
 						</a></div>
 					</div>
