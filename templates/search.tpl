@@ -29,7 +29,7 @@
 						</div>
 						<div class="col-md-2">
 							<label>&nbsp;</label>
-							<div class="groove-border-wrapper btn-wrapper"><button type="submit" class="btn btn-primary form-control">[[global:search]]</button></div>
+							<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button type="submit" class="btn btn-primary form-control">[[global:search]]</button></div>
 						</div>
 					</div>
 				</div>
