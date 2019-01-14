@@ -59,7 +59,7 @@
 						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/posts">
 							<i class="fa fa-download"></i> [[user:consent.export_posts]]
 						</a></div>
-						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default" href="{config.relative_path}/api/user/uid/{userslug}/export/uploads">
+						<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a class="btn btn-default disabled" href=".">
 							<i class="fa fa-download"></i> [[user:consent.export_uploads]]
 						</a></div>
 					</div>
