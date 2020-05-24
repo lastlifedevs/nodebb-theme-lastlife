@@ -1,8 +1,9 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header">
-	<!-- BEGIN widgets.header -->
+
+<div data-widget-area="header">
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{end}}}
 </div>
 <div class="users">
 	<div class="row">
@@ -10,11 +11,9 @@
 		<!-- IMPORT partials/users_list_menu.tpl -->
 		</div>
 		<div class="col-xs-3 text-right">
-			<!-- IF inviteOnly -->
-			<!-- IF loggedIn -->
+			<!-- IF showInviteButton -->
 			<div class="groove-border-wrapper btn-wrapper"><button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button></div>
-			<!-- ENDIF loggedIn -->
-			<!-- ENDIF inviteOnly -->
+			<!-- ENDIF showInviteButton -->
 		</div>
 		<!-- IF displayUserSearch -->
 		<div class="col-lg-3 col-xs-9">

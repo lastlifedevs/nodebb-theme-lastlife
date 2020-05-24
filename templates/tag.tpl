@@ -5,7 +5,7 @@
 		<div class="pull-left">
 			<div class="groove-border-wrapper btn-wrapper">
 				<!-- IF loggedIn -->
-				<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
+				<!-- IMPORT partials/buttons/newTopic.tpl -->
 				<!-- ELSE -->
 				<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 				<!-- ENDIF loggedIn -->

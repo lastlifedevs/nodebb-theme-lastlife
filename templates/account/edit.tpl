@@ -26,9 +26,9 @@
 						<!-- IF canChangePassword -->
 						<div class="groove-border-wrapper"><a href="{config.relative_path}/user/{userslug}/edit/password" class="btn btn-block btn-primary">[[user:change_password]]</a></div>
 						<!-- ENDIF canChangePassword -->
-						<!-- BEGIN editButtons -->
+						{{{each editButtons}}}
 						<div class="groove-border-wrapper"><a href="{config.relative_path}{editButtons.link}" class="btn btn-block btn-primary">{editButtons.text}</a></div>
-						<!-- END editButtons -->
+						{{{end}}}
 					</ul>
 
 					<!-- IF config.requireEmailConfirmation -->
@@ -85,14 +85,18 @@
 							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
 							<div class="controls">
 
-								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMultipleBadges -->>
+								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> size="{groupSelectSize}" multiple<!-- ENDIF allowMultipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
-									<!-- BEGIN groups -->
+									{{{each groups}}}
 									<!-- IF groups.userTitleEnabled -->
-									<option value="{groups.name}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
+									<option value="{groups.displayName}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
 									<!-- ENDIF groups.userTitleEnabled -->
-									<!-- END groups -->
+									{{{end}}}
 								</select>
+								<!-- IF allowMultipleBadges -->
+								<span>[[user:group-order-help]]</span>
+								<i role="button" component="group/order/up" class="fa fa-chevron-up"></i> <i role="button" component="group/order/down" class="fa fa-chevron-down"></i>
+								<!-- ENDIF -->
 							</div>
 						</div>
 
@@ -132,7 +136,7 @@
 			<div class="col-md-5 col-sm-4">
 				<label class="control-label">[[user:sso.title]]</label>
 				<div class="list-group">
-					<!-- BEGIN sso -->
+					{{{each sso}}}
 					<div class="list-group-item">
 						<!-- IF ../deauthUrl -->
 						<div class="groove-border-wrapper btn-wrapper"><a class="btn btn-default btn-xs pull-right" href="{../deauthUrl}">[[user:sso.dissociate]]</a></div>
@@ -143,7 +147,7 @@
 							{../name}
 						</a>
 					</div>
-					<!-- END sso -->
+					{{{end}}}
 				</div>
 			</div>
 			<!-- ENDIF sso.length -->

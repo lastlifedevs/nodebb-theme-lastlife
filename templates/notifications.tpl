@@ -20,19 +20,18 @@
 			<div class="groove-border-wrapper btn-wrapper">
 				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
 				<!-- IF selectedFilter -->{selectedFilter.name}<!-- ENDIF selectedFilter --> <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu">
-					<!-- BEGIN filters -->
-					<!-- IF filters.separator -->
-					<li role="separator" class="divider"></li>
-					<!-- ELSE -->
-					<li role="presentation" class="category">
-						<a role="menu-item" href="{config.relative_path}/notifications?filter={filters.filter}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i> {filters.name}</a>
-					</li>
-					<!-- ENDIF filters.separator -->
-					<!-- END filters -->
-				</ul>
-			</div>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				{{{each filters}}}
+				<!-- IF filters.separator -->
+				<li role="separator" class="divider"></li>
+				<!-- ELSE -->
+				<li role="presentation" class="category">
+					<a role="menu-item" href="{config.relative_path}/notifications?filter={filters.filter}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i> {filters.name}</a>
+				</li>
+				<!-- ENDIF filters.separator -->
+				{{{end}}}
+			</ul>
 		</div>
 	</div>
 
@@ -43,7 +42,7 @@
 	</div>
 
 	<ul class="notifications-list" data-nextstart="{nextStart}">
-	<!-- BEGIN notifications -->
+	{{{each notifications}}}
 		<li data-nid="{notifications.nid}" class="{notifications.readClass}" component="notifications/item">
 			<!-- IF notifications.image -->
 			<!-- IF notifications.from -->
@@ -54,13 +53,13 @@
 			<!-- ENDIF notifications.image -->
 
 			<p>
-				<a component="notifications/item/link" href="{config.relative_path}{notifications.path}">{notifications.bodyShort}</a>
+				<a component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
 			</p>
 			<p class="timestamp">
 				<span class="timeago" title="{notifications.datetimeISO}"></span>
 			</p>
 		</li>
-	<!-- END notifications -->
+	{{{end}}}
 	</ul>
 	<!-- IMPORT partials/paginator.tpl -->
 </div>

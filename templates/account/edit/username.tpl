@@ -24,7 +24,7 @@
 
 		<br/>
 		<div class="form-actions">
-			<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><a id="submitBtn" href="#" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_username]]</a></div>
+			<div class="groove-border-wrapper btn-wrapper btn-wrapper-block"><button id="submitBtn" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_username]]</button></div>
 		</div>
 	</form>
 </div>
