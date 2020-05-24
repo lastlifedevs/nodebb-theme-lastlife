@@ -119,26 +119,22 @@
 				<li role="presentation" class="divider"></li>
 				<li>
 					<a href="#" class="user-status" data-status="online">
-						<i class="fa fa-fw fa-circle status online"></i><span <!-- IF user.online -->class="bold"
-							<!-- ENDIF user.online -->> [[global:online]]</span>
+						<i class="fa fa-fw fa-circle status online"></i><span <!-- IF user.online -->class="bold"<!-- ENDIF user.online -->> [[global:online]]</span>
 					</a>
 				</li>
 				<li>
 					<a href="#" class="user-status" data-status="away">
-						<i class="fa fa-fw fa-circle status away"></i><span <!-- IF user.away -->class="bold"
-							<!-- ENDIF user.away -->> [[global:away]]</span>
+						<i class="fa fa-fw fa-circle status away"></i><span <!-- IF user.away -->class="bold"<!-- ENDIF user.away -->> [[global:away]]</span>
 					</a>
 				</li>
 				<li>
 					<a href="#" class="user-status" data-status="dnd">
-						<i class="fa fa-fw fa-circle status dnd"></i><span <!-- IF user.dnd -->class="bold"
-							<!-- ENDIF user.dnd -->> [[global:dnd]]</span>
+						<i class="fa fa-fw fa-circle status dnd"></i><span <!-- IF user.dnd -->class="bold"<!-- ENDIF user.dnd -->> [[global:dnd]]</span>
 					</a>
 				</li>
 				<li>
 					<a href="#" class="user-status" data-status="offline">
-						<i class="fa fa-fw fa-circle status offline"></i><span <!-- IF user.offline -->class="bold"
-							<!-- ENDIF user.offline -->> [[global:invisible]]</span>
+						<i class="fa fa-fw fa-circle status offline"></i><span <!-- IF user.offline -->class="bold"<!-- ENDIF user.offline -->> [[global:invisible]]</span>
 					</a>
 				</li>
 				<li role="presentation" class="divider"></li>
@@ -268,14 +264,8 @@
 		{{{each navigation}}}
 		<!-- IF function.displayMenuItem, @index -->
 		<li class="{navigation.class}">
-			<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id
-				-->id="{navigation.id}"
-				<!-- ENDIF navigation.id -->
-				<!-- IF navigation.properties.targetBlank --> target="_blank"
-				<!-- ENDIF navigation.properties.targetBlank -->>
-				<!-- IF navigation.iconClass -->
-				<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
-				<!-- ENDIF navigation.iconClass -->
+			<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+				<!-- IF navigation.iconClass --><i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i><!-- ENDIF navigation.iconClass -->
 
 				<!-- IF navigation.text -->
 				<span class="{navigation.textClass}">{navigation.text}</span>
