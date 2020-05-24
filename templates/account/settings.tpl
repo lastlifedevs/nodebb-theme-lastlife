@@ -5,32 +5,36 @@
 		<div class="col-xs-12 col-md-6">
 			<!-- IF !disableCustomUserSkins -->
 			<h4>[[user:select-skin]]</h4>
-			<div class="well">
-				<select class="form-control" id="bootswatchSkin" data-property="bootswatchSkin">
-					{{{each bootswatchSkinOptions}}}
-					<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
-					{{{end}}}
-				</select>
+			<div class="well-wrapper groove-border-wrapper">
+				<div class="well">
+					<select class="form-control" id="bootswatchSkin" data-property="bootswatchSkin">
+						{{{each bootswatchSkinOptions}}}
+						<option value="{bootswatchSkinOptions.value}" <!-- IF bootswatchSkinOptions.selected -->selected<!-- ENDIF bootswatchSkinOptions.selected -->>{bootswatchSkinOptions.name}</option>
+						{{{end}}}
+					</select>
+				</div>
 			</div>
 			<!-- ENDIF !disableCustomUserSkins -->
 
 			<!-- IF allowUserHomePage -->
 			<h4>[[user:select-homepage]]</h4>
-			<div class="well">
-				<div class="form-group">
-					<label for="dailyDigestFreq">[[user:homepage]]</label>
-					<select class="form-control" data-property="homePageRoute">
-						<option value="none">None</option>
-						{{{each homePageRoutes}}}
-						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
-						{{{end}}}
-					</select>
-					<p class="help-block">[[user:homepage_description]]</p>
-				</div>
-				<div id="homePageCustom" class="form-group" style="display: none;">
-					<label for="homePageCustom">[[user:custom_route]]</label>
-					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
-					<p class="help-block">[[user:custom_route_help]]</p>
+			<div class="well-wrapper groove-border-wrapper">
+				<div class="well">
+					<div class="form-group">
+						<label for="dailyDigestFreq">[[user:homepage]]</label>
+						<select class="form-control" data-property="homePageRoute">
+							<option value="none">None</option>
+							{{{each homePageRoutes}}}
+							<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
+							{{{end}}}
+						</select>
+						<p class="help-block">[[user:homepage_description]]</p>
+					</div>
+					<div id="homePageCustom" class="form-group" style="display: none;">
+						<label for="homePageCustom">[[user:custom_route]]</label>
+						<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}" />
+						<p class="help-block">[[user:custom_route_help]]</p>
+					</div>
 				</div>
 			</div>
 			<!-- ENDIF allowUserHomePage -->
@@ -239,11 +243,10 @@
 					<!-- ENDIF !config.disableChat -->
 				</div>
 			</div>
-			
+
 			<div class="form-actions settings-submit-row">
 				<div class="groove-border-wrapper btn-wrapper"><a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a></div>
 			</div>
 		</div>
 	</div>
 </div>
-
