@@ -1,13 +1,8 @@
 <div class="rpg-box author-info-box">
     <div class="icon" aria-hidden="true">
         <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-            <!-- IF posts.user.picture -->
-            <img src="{posts.user.picture}" align="left" itemprop="image" />
-            <!-- ELSE -->
-            <div class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
-            <!-- ENDIF posts.user.picture -->
+            {buildAvatar(posts.user, "sm", true)}
             <i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
-
         </a>
     </div>
     <div class="author-name-container">
