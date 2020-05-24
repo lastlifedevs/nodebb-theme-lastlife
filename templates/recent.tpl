@@ -1,15 +1,15 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header">
-	<!-- BEGIN widgets.header -->
+<div data-widget-area="header">
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{end}}}
 </div>
 <div class="recent">
 	<div class="btn-toolbar">
 		<div class="pull-left">
 			<div class="groove-border-wrapper btn-wrapper">
 				<!-- IF canPost -->
-				<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
+				<!-- IMPORT partials/buttons/newTopic.tpl -->
 				<!-- ELSE -->
 				<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 				<!-- ENDIF canPost -->
@@ -23,16 +23,16 @@
 		<!-- IMPORT partials/category-filter.tpl -->
 
 		<div class="btn-group pull-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
-				<div class="groove-border-wrapper btn-wrapper">
+			<div class="groove-border-wrapper btn-wrapper">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				{selectedFilter.name} <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
-					<!-- BEGIN filters -->
+					{{{each filters}}}
 					<li role="presentation" class="category">
 						<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 					</li>
-					<!-- END filters -->
+					{{{end}}}
 				</ul>
 			</div>
 		</div>

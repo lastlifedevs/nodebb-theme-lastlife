@@ -1,45 +1,40 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<div widget-area="header">
-	<!-- BEGIN widgets.header -->
+<div data-widget-area="header">
+	{{{each widgets.header}}}
 	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{end}}}
 </div>
 <div class="unread">
 	<div class="btn-toolbar">
 		<div class="pull-left">
 			<div class="groove-border-wrapper btn-wrapper">
-				<!-- IF canPost -->
-				<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
-				<!-- ELSE -->
-				<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-				<!-- ENDIF canPost -->
+				<!-- IMPORT partials/buttons/newTopic.tpl -->
 				<a href="{config.relative_path}/{selectedFilter.url}{querystring}" class="inline-block">
 					<div class="alert alert-warning hide" id="new-topics-alert"></div>
 				</a>
 			</div>
 		</div>
 		<div class="markread btn-group pull-right category-dropdown-container bottom-sheet<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
-			<div class="groove-border-wrapper btn-wrapper">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					[[unread:mark_as_read]] <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu category-dropdown-menu" role="menu">
+		<div class="groove-border-wrapper btn-wrapper">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				[[unread:mark_as_read]] <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu category-dropdown-menu" role="menu">
 
-					<li role="presentation">
-						<a id="markSelectedRead" role="menuitem" tabindex="-1" href="#">[[unread:selected]]</a>
-					</li>
+				<li role="presentation">
+					<a id="markSelectedRead" role="menuitem" tabindex="-1" href="#">[[unread:selected]]</a>
+				</li>
 
-					<li role="presentation">
-						<a id="markAllRead" role="menuitem" tabindex="-1" href="#">[[unread:all]]</a>
-					</li>
-					<li class="divider"></li>
-					<!-- BEGIN categories -->
-					<li role="presentation" class="category" data-cid="{categories.cid}">
-						<a role="menu-item" href="#">{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
-					</li>
-					<!-- END categories -->
-				</ul>
-			</div>
+				<li role="presentation">
+					<a id="markAllRead" role="menuitem" tabindex="-1" href="#">[[unread:all]]</a>
+				</li>
+				<li class="divider"></li>
+				{{{each categories}}}
+				<li role="presentation" class="category" data-cid="{categories.cid}">
+					<a role="menu-item" href="#">{categories.level}<!-- IF categories.icon --><span class="fa-stack" style="{function.generateCategoryBackground}"><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
+				</li>
+				{{{end}}}
+			</ul>
 		</div>
 
 		<!-- IMPORT partials/category-filter.tpl -->
@@ -47,14 +42,14 @@
 		<div class="btn-group pull-right bottom-sheet">
 			<div class="groove-border-wrapper btn-wrapper">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					{selectedFilter.name} <span class="caret"></span>
+				{selectedFilter.name} <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu" role="menu">
-					<!-- BEGIN filters -->
+					{{{each filters}}}
 					<li role="presentation" class="category">
 						<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 					</li>
-					<!-- END filters -->
+					{{{end}}}
 				</ul>
 			</div>
 		</div>
