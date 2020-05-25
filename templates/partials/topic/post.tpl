@@ -1,7 +1,7 @@
 <div class="rpg-box author-info-box">
     <div class="icon" aria-hidden="true">
         <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-            {buildAvatar(posts.user, "sm", true)}
+            {buildAvatar(posts.user, "lg", true)}
             <i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
         </a>
     </div>

@@ -32,10 +32,6 @@
 			</span>
 		</div>
 
-		<hr class="hidden-xs" />
-
-		<p class="hidden-xs">{name}</p>
-
 		<!-- IF !topics.length -->
 		<!-- IF privileges.topics:create -->
 		<hr class="visible-xs" />

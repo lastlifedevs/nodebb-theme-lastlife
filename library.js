@@ -6,6 +6,16 @@ var user = require.main.require('./src/user');
 
 var library = {};
 
+library.addAdminNavigation = function(header, callback) {
+	header.plugins.push({
+		route: '/plugins/lastlife',
+		icon: 'fa-paint-brush',
+		name: 'Last Life Theme'
+	});
+
+	callback(null, header);
+};
+
 library.getTeasers = function(data, callback) {
 	data.teasers.forEach(function(teaser) {
 		if (teaser && teaser.content) {
@@ -65,6 +75,15 @@ library.defineWidgetAreas = function(areas, callback) {
 	]);
 
 	callback(null, areas);
+};
+
+library.getThemeConfig = function(config, callback) {
+	meta.settings.get('persona', function(err, settings) {
+		config.hideSubCategories = settings.hideSubCategories === 'on';
+		config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
+		config.enableQuickReply = settings.enableQuickReply === 'on';
+		callback(null, config);
+	});
 };
 
 library.addUserToTopic = function(data, callback) {

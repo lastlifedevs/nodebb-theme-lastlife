@@ -6,8 +6,7 @@
 </div>
 <div class="row">
 	<div class="<!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
-		<h1 class="categories-title">[[pages:categories]]</h1>
-		<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
+		<ul class="categories b-1px-black" itemscope itemtype="http://www.schema.org/ItemList">
 			{{{each categories}}}
 			<!-- IMPORT partials/categories/item.tpl -->
 			{{{end}}}
@@ -19,7 +18,7 @@
 		{{{end}}}
 	</div>
 </div>
-<div data-widget-area="footer">
+<div class="mt2" data-widget-area="footer">
 	{{{each widgets.footer}}}
 	{{widgets.footer.html}}
 	{{{end}}}

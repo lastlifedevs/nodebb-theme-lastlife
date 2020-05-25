@@ -1,5 +1,6 @@
 @import "./less/bootstrap/bootstrap";
 @import "./less/persona";
+@import "./less/custom";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto:400,700");
 
 // Variables
@@ -285,6 +286,10 @@ hr {
   }
 }
 
+.b-1px-black {
+  border: 1px solid #000000;
+}
+
 /**
 * Navbar, logo, etc.
 **/
@@ -503,10 +508,6 @@ ul#main-nav {
   }
 }
 
-.categories-container {
-  border: 1px solid #000000;
-}
-
 .categories .description,
 .category .description,
 .subcategory .description {
@@ -597,6 +598,10 @@ ul#main-nav {
   display: flex;
   align-items: center;
   justify-items: center;
+}
+
+.topic-title-wrapper {
+  flex: 1;
 }
 
 @media (max-width: 767px) {
@@ -954,10 +959,6 @@ fieldset[disabled] .form-control {
   margin-top: 0;
 }
 
-.topics-container {
-  border: 1px solid #000000;
-}
-
 li.row.clearfix.category-item.topic-row {
   display: flex;
   align-items: center;
@@ -969,7 +970,12 @@ li.row.clearfix.category-item.topic-row {
 }
 
 .category > ul > li .select .fa-check {
-  padding: 10px;
+  background: transparent;
+  top: 2px;
+  left: 2px;
+  width: 90%;
+  height: 90%;
+  padding: 9px;
   z-index: 3;
 }
 
@@ -1190,6 +1196,10 @@ li[component="post"] a.permalink {
     font-weight: inherit;
     text-transform: none;
   }
+}
+
+.topic .posts .rpg-box .icon .avatar {
+  margin: 0;
 }
 
 .stats-container {
@@ -1473,6 +1483,16 @@ pre code, code {
 
   .topic .post-signature {
     display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .topic .posts .icon .user-icon,
+  .topic .posts .icon .avatar,
+  .topic .posts .icon img {
+    width: 36px;
+    height: 36px;
+    line-height: 1.25;
   }
 }
 
